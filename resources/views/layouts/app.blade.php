@@ -14,21 +14,28 @@
                 <a href=>Home</a>
             </li>
             <li>
-                <a href= "">Dashboard</a>
+                <a href= "{{route('dashboard')}}">Dashboard</a>
             </li>
         </ul>
 
         <ul>
-                <li>
-                    <a href="">Login</a>
-                </li>
+            @auth
+            <form action="{{route('logout')}}" method="post">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
+            @endauth
 
-                <li>
-                    <a href="">Register</a>
-                </li>
-                <li>
-                    <a href="">Logout</a>
-                </li>
+            @guest
+            <li>
+                <a href="{{route('login')}}">Login</a>
+            </li>
+
+            <li>
+                <a href="{{route('register')}}">Register</a>
+            </li>
+            @endguest
+                
                         
         </ul>
     </nav>
