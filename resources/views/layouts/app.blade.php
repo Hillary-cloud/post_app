@@ -11,7 +11,7 @@
     <nav class="">
         <ul class="">
             <li>
-                <a href=>Home</a>
+                <a href="">Home</a>
             </li>
             <li>
                 <a href= "{{route('dashboard')}}">Dashboard</a>

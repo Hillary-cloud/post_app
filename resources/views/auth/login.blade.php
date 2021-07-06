@@ -8,11 +8,13 @@
                 <div class="mb-4">
                     <label for="email" class="sr-only">Email</label>
                     <input type="text" name="email" id="email" placeholder="Your email" value="">
+                    @error('email'){{$message}}@enderror
                 </div>
 
                 <div>
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" name="password" id="password" placeholder="Choose a password" value="">
+                    @error('password'){{$message}}@enderror
                 </div>
                 
 
